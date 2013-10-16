@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title IdeaBox Error
+    %body
+      %h1 An Error Occured
+
+      %h3 Params
+      %table{ :border => 1 }
+        %tr
+          %th Request Verb
+          %td= request.request_method
+        %tr
+          %th Request Path
+          %td= request.path
+        %tr
+          %th{ :colspan => 4}Parameters
+        %tr
+          = request.params.each do |key, value|
+            %td= key
+            %td= value

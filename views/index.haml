@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title IdeaBox 
+  %body
+    %h1 IdeaBox
+    %p Your Idea:
+    %form{ :action => '/', :method => 'POST'}
+      %input{ :type => 'text', :name => 'idea_title'}
+      %br
+      %textarea{ :name => 'idea_description'}
+      %br
+      %input{ :type => 'submit'}
+
+    %h3 Existing Ideas
+    %ul
+      - ideas.each_with_index do |idea, id|
+        %li
+          = idea.title
+          = idea.description
+
+          %a{ :href => "/#{id}/edit"} Edit
+          %form{ :action => "/#{id}", :method => 'POST'}
+            %input{ :type => 'hidden', :name => '_method', :value => 'DELETE'}
+            %input{ :type => 'submit', :value => 'delete'}
+
