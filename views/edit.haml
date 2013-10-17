@@ -8,9 +8,9 @@
       %form{ :action => "/#{id}", :method => 'POST'}
         %p Edit Your Idea:
         %input{ :type => 'hidden', :name => '_method', :value => 'PUT'}
-        %input{ :type => 'text', :name => 'idea_title', :value => "#{idea.title}"}
+        %input{ :type => 'text', :name => 'idea[title]', :value => "#{idea.title}"}
         %br
-        %textarea{ :name => 'idea_description' } #{idea.description}
+        %textarea{ :name => 'idea[description]' } #{idea.description}
         %br
         %input{ :type => 'submit'}
 
