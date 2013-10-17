@@ -1,11 +1,6 @@
-!!!
-%html
-  %head
-    %title IdeaBox
-    %body
-      %h1 IdeaBox
+%h1 IdeaBox
 
-      = haml :form, locals: {idea: idea, id: id, mode: "edit" }
+= haml :form, locals: {idea: idea, id: id, mode: "edit" }
 
 -#      %form{ :action => "/#{id}", :method => 'POST'}
         %p Edit Your Idea:

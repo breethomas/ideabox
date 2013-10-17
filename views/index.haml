@@ -1,20 +1,15 @@
-!!!
-%html
-  %head
-    %title IdeaBox 
-  %body
-    %h1 IdeaBox
-    = haml :form, locals: {idea: idea, mode: "new"}
+%h1 IdeaBox
+= haml :form, locals: {idea: idea, mode: "new"}
 
-    %h3 Existing Ideas
-    %ul
-      - ideas.each_with_index do |idea, id|
-        %li
-          = idea.title
-          = idea.description
+%h3 Existing Ideas
+%ul
+  - ideas.each_with_index do |idea, id|
+    %li
+      = idea.title
+      = idea.description
 
-          %a{ :href => "/#{id}/edit"} Edit
-          %form{ :action => "/#{id}", :method => 'POST'}
-            %input{ :type => 'hidden', :name => '_method', :value => 'DELETE'}
-            %input{ :type => 'submit', :value => 'delete'}
+      %a{ :href => "/#{id}/edit"} Edit
+      %form{ :action => "/#{id}", :method => 'POST'}
+      %input{ :type => 'hidden', :name => '_method', :value => 'DELETE'}
+      %input{ :type => 'submit', :value => 'delete'}
 
