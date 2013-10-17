@@ -4,13 +4,7 @@
     %title IdeaBox 
   %body
     %h1 IdeaBox
-    %p Your Idea:
-    %form{ :action => '/', :method => 'POST'}
-      %input{ :type => 'text', :name => 'idea[title]'}
-      %br
-      %textarea{ :name => 'idea[description]'}
-      %br
-      %input{ :type => 'submit'}
+    = haml :form
 
     %h3 Existing Ideas
     %ul
