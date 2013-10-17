@@ -15,7 +15,7 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/' do
-    haml :index, locals: {ideas: Idea.all}
+    haml :index, locals: {ideas: Idea.all, idea: Idea.new}
   end
 
   get '/:id/edit' do |id|

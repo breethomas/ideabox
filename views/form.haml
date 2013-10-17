@@ -1,8 +1,8 @@
 %form{ :action => '/', :method => 'POST'}
   %p Your Idea:
-  %input{ :type => 'text', :name => 'idea[title]'}
+  %input{ :type => 'text', :name => 'idea[title]', :value => "#{idea.title}"}
   %br
-  %textarea{ :name => 'idea[description]'}
+  %textarea{ :name => 'idea[description]'} #{idea.description}
   %br
   %input{ :type => 'submit'}
 
