@@ -5,7 +5,9 @@
     %body
       %h1 IdeaBox
 
-      %form{ :action => "/#{id}", :method => 'POST'}
+      = haml :form, locals: {idea: idea, id: id, mode: "edit" }
+
+-#      %form{ :action => "/#{id}", :method => 'POST'}
         %p Edit Your Idea:
         %input{ :type => 'hidden', :name => '_method', :value => 'PUT'}
         %input{ :type => 'text', :name => 'idea[title]', :value => "#{idea.title}"}

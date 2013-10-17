@@ -15,12 +15,12 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/' do
-    haml :index, locals: {ideas: Idea.all, idea: Idea.new}
+    haml :index, locals: {ideas: Idea.all, idea: Idea.new, mode: "new"}
   end
 
   get '/:id/edit' do |id|
     idea = Idea.find(id.to_i)
-    haml :edit, locals: {id: id, idea: idea} 
+    haml :edit, locals: {id: id, idea: idea, mode: "edit"} 
   end
 
   put '/:id' do |id|
