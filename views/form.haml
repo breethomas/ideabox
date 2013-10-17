@@ -1,0 +1,14 @@
+%form{ :action => '/', :method => 'POST'}
+  %p Your Idea:
+  %input{ :type => 'text', :name => 'idea[title]'}
+  %br
+  %textarea{ :name => 'idea[description]'}
+  %br
+  %input{ :type => 'submit'}
+
+
+    %a{ :href => "/#{id}/edit"} Edit
+    %form{ :action => "/#{id}", :method => 'POST'}
+      %input{ :type => 'hidden', :name => '_method', :value => 'DELETE'}
+      %input{ :type => 'submit', :value => 'delete'}
+

@@ -5,7 +5,7 @@ class Idea
 
   def self.all
     raw_ideas.map do |data|
-      new(data[:title], data[:description])
+      new(data)
     end
   end
 
@@ -27,7 +27,7 @@ class Idea
 
   def self.find(id)
     raw_idea = find_raw_idea(id)
-    new(raw_idea[:title], raw_idea[:description])
+    new(raw_idea)
   end
 
   def self.find_raw_idea(id)
@@ -42,9 +42,9 @@ class Idea
     end
   end
 
-  def initialize(title, description)
-    @title = title
-    @description = description
+  def initialize(attributes)
+    @title = attributes[:title]
+    @description = attributes[:description]
   end
 
   def database

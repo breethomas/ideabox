@@ -6,9 +6,9 @@
     %h1 IdeaBox
     %p Your Idea:
     %form{ :action => '/', :method => 'POST'}
-      %input{ :type => 'text', :name => 'idea_title'}
+      %input{ :type => 'text', :name => 'idea[title]'}
       %br
-      %textarea{ :name => 'idea_description'}
+      %textarea{ :name => 'idea[description]'}
       %br
       %input{ :type => 'submit'}
 
