@@ -2,7 +2,7 @@
   - if idea.id
     %p Edit Your Idea:
   - else
-  %p Your Idea:
+    %p Your Idea:
   - if idea.id
     %input{:type => "hidden", :name => "_method", :value => "PUT"}
   %input{ :type => 'text', :name => 'idea[title]', :value => "#{idea.title}"}

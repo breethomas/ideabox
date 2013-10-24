@@ -1,4 +1,10 @@
 ---
 ideas:
-- title: WTF
-  description: what am I doing?
+- title: That
+  description: is a good idea
+- title: I am bonkers
+  description: for crazy ideas
+  rank: 1
+- title: GREAT idea
+  description: your idea sucks
+  rank: 7

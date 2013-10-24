@@ -5,8 +5,8 @@
 %ul
   - ideas.each do |idea|
     %li
-      %form{ :action => "/#{idea.id}/like", :method => 'POST', :style => 'inline'}
-      %input{ :type => 'submit', :value => "+"}
+      %form{ :action => "/#{idea.id}/like", :method => 'POST', :style => 'display: inline;'}
+        %input{ :type => 'submit', :value => "+"}
       = idea.title
       = idea.description
 
